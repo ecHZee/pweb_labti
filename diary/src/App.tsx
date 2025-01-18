@@ -6,6 +6,7 @@ import "./App.css";
 
 function App() {
   const [entries, setEntries] = useState([]);
+  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [date, setDate] = useState(new Date());
@@ -13,7 +14,7 @@ function App() {
   const [currentEntryId, setCurrentEntryId] = useState(null);
 
   const currentTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-  axios.defaults.baseURL = "http://localhost:5000";
+  axios.defaults.baseURL = "http://localhost:5100";
   // Fetch entries on load
   useEffect(() => {
     axios
@@ -188,3 +189,5 @@ function App() {
 }
 
 export default App;
+
+
